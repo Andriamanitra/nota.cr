@@ -24,7 +24,7 @@ module Nota
     else
       shift = (uvalue.bit_length + 3) // 7 * 7
       io.write_byte 0b1000_0000_u8 | preamble | (uvalue >> shift).to_u8
-      self.encode_int_continuation(io, uvalue, shift-7)
+      self.encode_int_continuation(io, uvalue, shift - 7)
     end
 
     return io
@@ -44,7 +44,7 @@ module Nota
     else
       shift = (uvalue.bit_length + 3) // 7 * 7
       io.write_byte 0b1000_0000_u8 | preamble | (uvalue >> shift).to_u8
-      self.encode_int_continuation(io, uvalue, shift-7)
+      self.encode_int_continuation(io, uvalue, shift - 7)
     end
 
     return io
@@ -64,7 +64,7 @@ module Nota
     else
       shift = (uvalue.bit_length + 3) // 7 * 7
       io.write_byte 0b1000_0000_u8 | preamble | (uvalue >> shift).to_u8
-      self.encode_int_continuation(io, uvalue, shift-7)
+      self.encode_int_continuation(io, uvalue, shift - 7)
     end
 
     return io
@@ -78,7 +78,7 @@ module Nota
     else
       shift = (value.bit_length + 3) // 7 * 7
       io.write_byte 0b1000_0000_u8 | preamble | (value >> shift).to_u8
-      self.encode_int_continuation(io, value, shift-7)
+      self.encode_int_continuation(io, value, shift - 7)
     end
 
     return io
